@@ -6,3 +6,14 @@ body {
   font-size: 13px;
   line-height: 20px;
 }
+
+.dialog div div div {
+  border-radius: 20px !important;
+}
+
+.dialog h3 {
+  background-color: #f85252;
+  color: #ffffff !important;
+  border-radius: 15px 15px 0 0 !important;
+  font-size: 1.8rem !important;
+}

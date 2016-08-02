@@ -17,7 +17,7 @@ const styles = {
 const muiTheme = getMuiTheme({
   palette: {
     accent1Color: deepOrange500,
-  },
+  }
 });
 
 class Main extends Component {
@@ -58,6 +58,15 @@ class Main extends Component {
       />
     ];
 
+    const dialogStyle = {
+      maxWidth: 450
+    }
+
+    const textFieldStyle = {
+      display: 'block',
+      margin: 'auto auto'
+    }
+
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div style={styles.container}>
@@ -66,17 +75,24 @@ class Main extends Component {
             title="Sign in"
             actions={actions}
             onRequestClose={this.handleRequestClose}
+            contentStyle={dialogStyle}
+            className="dialog"
           >
 
             <TextField
               floatingLabelText="Email"
               type="email"
-              ref="email"/>
+              ref="email"
+              style={textFieldStyle}
+            />
 
             <TextField
               floatingLabelText="Password"
               type="password"
-              ref="password"/>
+              ref="password"
+              style={textFieldStyle}
+            />
+
           </Dialog>
           <h1>You are not authenticated</h1>
           <RaisedButton
