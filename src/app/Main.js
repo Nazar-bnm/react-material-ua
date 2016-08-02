@@ -5,6 +5,7 @@ import {deepOrange500} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import TextField from 'material-ui/TextField';
 
 const styles = {
   container: {
@@ -66,6 +67,16 @@ class Main extends Component {
             actions={actions}
             onRequestClose={this.handleRequestClose}
           >
+
+            <TextField
+              floatingLabelText="Email"
+              type="email"
+              ref="email"/>
+
+            <TextField
+              floatingLabelText="Password"
+              type="password"
+              ref="password"/>
           </Dialog>
           <h1>You are not authenticated</h1>
           <RaisedButton
