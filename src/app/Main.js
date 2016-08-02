@@ -12,6 +12,16 @@ const styles = {
     textAlign: 'center',
     paddingTop: 200,
   },
+  underlineStyle: {
+    borderColor: '#f85252'
+  },
+  focusStyle: {
+    borderColor: deepOrange500,
+    color: deepOrange500
+  },
+  labelStyle: {
+    color: deepOrange500
+  }
 };
 
 const muiTheme = getMuiTheme({
@@ -52,7 +62,7 @@ class Main extends Component {
         onTouchTap={this.handleRequestClose}
       />,
       <FlatButton
-        label="Login"
+        label="Sign In"
         primary={true}
         onTouchTap={this.handleRequestClose}
       />
@@ -83,14 +93,24 @@ class Main extends Component {
               floatingLabelText="Email"
               type="email"
               ref="email"
+              fullWidth={true}
               style={textFieldStyle}
+              underlineStyle={styles.underlineStyle}
+              underlineFocusStyle={styles.focusStyle}
+              floatingLabelStyle={styles.labelStyle}
+              floatingLabelFocusStyle={styles.focusStyle}
             />
 
             <TextField
               floatingLabelText="Password"
               type="password"
               ref="password"
+              fullWidth={true}
               style={textFieldStyle}
+              underlineStyle={styles.underlineStyle}
+              underlineFocusStyle={styles.focusStyle}
+              floatingLabelStyle={styles.labelStyle}
+              floatingLabelFocusStyle={styles.focusStyle}
             />
 
           </Dialog>
