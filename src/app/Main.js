@@ -6,6 +6,7 @@ import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
+import ActionAndroid from 'material-ui/svg-icons/action/android';
 
 const styles = {
   container: {
@@ -131,7 +132,7 @@ class Main extends Component {
             />
 
           </Dialog>
-          <h1>You are not authenticated</h1>
+          <h1>You are not authenticated!</h1>
           <RaisedButton
             label="Sign in"
             secondary={true}
