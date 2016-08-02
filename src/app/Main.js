@@ -55,15 +55,32 @@ class Main extends Component {
   }
 
   render() {
+    const buttonStyle = {
+      marginRight: 16
+    }
+
+    const buttonLabel = {
+      color: 'white'
+    }
+
+    const cancelLabel = {
+      color: '#f85252'
+    }
+
     const actions = [
       <FlatButton
         label="Cancel"
-        primary={true}
+        labelStyle={cancelLabel}
+        style={buttonStyle}
+        hoverColor="#d4d4d4"
         onTouchTap={this.handleRequestClose}
       />,
       <FlatButton
         label="Sign In"
-        primary={true}
+        backgroundColor= '#35cd76'
+        hoverColor="#5db181"
+        labelStyle={buttonLabel}
+        style={buttonStyle}
         onTouchTap={this.handleRequestClose}
       />
     ];
